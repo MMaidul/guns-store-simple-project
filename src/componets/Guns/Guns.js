@@ -1,18 +1,20 @@
 import React from 'react';
 import './Guns.css';
 
-const Guns = () => {
+const Guns = ({ gunData }) => {
+    console.log(gunData);
+    const { img, name, bullet, capacity, action, price } = gunData;
     return (
         <div className='gun-container'>
             <div className="gun__img">
-                <img src="https://raw.githubusercontent.com/mir-hussain/guns/main/guns/glock.png" alt="" />
+                <img src={img} alt="" />
             </div>
             <div className="gun__info">
-                <h2>Glock 17 Gen5</h2>
-                <p>Bullet Type: 9mn</p>
-                <p>Capacity: 17+ 1</p>
-                <p>Action: semi Automatic</p>
-                <p>Price: $540</p>
+                <h3>{name}</h3>
+                <p>Bullet Type: {bullet}</p>
+                <p>Capacity: {capacity}</p>
+                <p>Action: {action}</p>
+                <p>Price: ${price}</p>
             </div>
         </div>
     );

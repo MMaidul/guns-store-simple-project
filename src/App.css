@@ -1,5 +1,6 @@
-body{
-  background-color: #171717;
+.header-componet{
+  position: sticky;
+  top: 0;
 }
 .guns-container{
   display: grid;
