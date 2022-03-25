@@ -7,4 +7,24 @@
     background-color: gray;
     padding: 20px;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-count{
+    padding-right: 50px;
+    position: relative;
+}
+.cart-count h2{
+    position: absolute;
+    left: 50px;
+    background-color: tomato;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+   line-height: 30px;
+    border-radius: 50%;
+}
+.cart-count span{
+    font-size: 50px;
 }

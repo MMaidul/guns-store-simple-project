@@ -6,7 +6,6 @@ import Header from './componets/Header/Header';
 function App() {
   const [guns, setGuns] = useState([]);
   const [cart, setCart] = useState([]);
-  console.log(cart);
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
@@ -21,7 +20,7 @@ function App() {
   return (
     <div className='App'>
       <div className='header-componet'>
-        <Header />
+        <Header count={cart} />
       </div>
       <div>
         {
