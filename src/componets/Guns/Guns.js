@@ -1,9 +1,10 @@
 import React from 'react';
+import { BsFillCartCheckFill } from 'react-icons/bs';
 import './Guns.css';
 
-const Guns = ({ gunData }) => {
-    console.log(gunData);
-    const { img, name, bullet, capacity, action, price } = gunData;
+const Guns = ({ gunData, handleAddToCart }) => {
+    const { img, name, bullet, capacity, action, price, id } = gunData;
+
     return (
         <div className='gun-container'>
             <div className="gun__img">
@@ -14,7 +15,12 @@ const Guns = ({ gunData }) => {
                 <p>Bullet Type: {bullet}</p>
                 <p>Capacity: {capacity}</p>
                 <p>Action: {action}</p>
-                <p>Price: ${price}</p>
+                <h2 className='gun__info--price'>
+                    <button onClick={() => { handleAddToCart(gunData) }}>
+                        <BsFillCartCheckFill />
+                    </button>
+                    ${price}
+                </h2>
             </div>
         </div>
     );

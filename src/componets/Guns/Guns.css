@@ -19,3 +19,20 @@ img{
    padding-top: 20px;
    padding-left: 10px;
 }
+
+.gun__info h3{
+    margin-bottom: 20px;
+}
+.gun__info--price{
+    margin-top: 25px;
+}
+.gun__info--price button{
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 7px 0;
+    margin-right: 20px;
+    cursor: pointer;
+}

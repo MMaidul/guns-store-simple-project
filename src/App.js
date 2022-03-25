@@ -5,22 +5,37 @@ import Header from './componets/Header/Header';
 
 function App() {
   const [guns, setGuns] = useState([]);
+  const [cart, setCart] = useState([]);
+  console.log(cart);
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setGuns(data))
-  }, [])
+  }, []);
+
+  const handleAddToCart = (gun) => {
+    const newCart = [...cart, gun];
+    setCart(newCart)
+  }
 
   return (
     <div className='App'>
       <div className='header-componet'>
         <Header />
       </div>
+      <div>
+        {
+          cart.map(item => <h1
+            key={item.id}>{item.name}
+          </h1>)
+        }
+      </div>
       <div className='guns-container'>
         {
           guns.map(gunData => <Guns
             key={gunData.id}
             gunData={gunData}
+            handleAddToCart={handleAddToCart}
           />)
         }
       </div>
